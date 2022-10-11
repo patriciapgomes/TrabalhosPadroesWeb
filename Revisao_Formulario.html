@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Formulário</h2>
+
+    <form method= "GET" action="programa.php">
+        <label for="idname">Nome</label>
+        <input type="text" 
+        name="name" 
+        placeholder="Digite seu nome" 
+        value="">
+        <br>
+        <br>
+
+        <label for="idgen">Gênero</label>
+        <br>
+        <input type="radio" name="genero" id="idM" value="M">
+        <label for="idM">Masculino</label>
+        <input type="radio" name="genero" id="idF" value="F" checked>
+        <label for="idF">Feminino</label>
+        <br>
+        <br>
+
+        <label for="idgen">Passatempo</label>
+        <br>
+        <input type="checkbox" name="passatempo1" id="idFut" value="Fut">
+        <label for="idFut">Futebol</label>
+        <input type="checkbox" name="passatempo2" id="idNat" value="Nat" checked>
+        <label for="idNat">Natação</label>
+        <br>
+        <br>
+
+        <label for="idCurso">Curso</label>
+        <select name="curso">
+            <option>Escolha o seu Curso</option>
+            <option value="1">Análise e Desenvolvimento de Sistemas</option>
+            <option value="2">Banco de Dados</option>
+            <option value="3">Ciência de Dados</option>
+            <option value="4">Gestão de Tecnologia da Informação</option>
+            <option value="5"selected>Segurança da Informação</option>
+        </select>
+        <br>    
+        <br>
+
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
