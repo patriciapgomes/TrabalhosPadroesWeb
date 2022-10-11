@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04.10.2022 PW Patrícia Gomes</title>
+</head>
+
+<body>
+    	<p id="Topo">
+	Ir Para o <a href="#Fim">Final da Página</a>
+	<h1>Exercício 04.10.2022 - Padrões Web - Patrícia Gomes</h1>
+        <b><p>1) Responda as perguntas abaixo:</p>
+        <p>a) Na tag &ltinput&gt com atributo type="text", para que serve o atributo "placeholder"?</p></b>
+        <p>O atributo placeholder especifica uma dica curta que descreve o valor esperado de um campo de entrada (por exemplo, um valor de amostra ou uma breve descrição do formato esperado). A dica curta é exibida no campo de entrada antes que o usuário insira um valor. Observação: o atributo placeholder funciona com os seguintes tipos de entrada: texto, pesquisa, url, tel, email e senha.
+        Sua sintaxe é: &lt input placeholder="text"&gt.</p>
+        
+        <b><p>b) Na tag &lt input> com atributo type="radio", para que serve o atributo "checked"?</p></b>
+        <p> O atributo checked retorna o estado marcado de um botão de opção. Esta propriedade reflete o atributo HTML verificado.
+        Sua sintaxe é: 	radioObject.checked = verdadeiro -> o Botão radio está marcado
+        radioObject.checked = falso -> o Botão radio não está marcado.</p>
+        
+        <b><p>c) Na tag  &ltinput&gt  para que serve o atributo "value"?</p></b>
+        <p>O atributo value especifica o valor de um elemento &ltinput &gt. O atributo value é usado de forma diferente para diferentes tipos de entrada:</p>
+        <ul style="list-style-type:disc">
+            <li>Para "botão", "redefinir" e "enviar" - define o texto no botão;</li> 					
+            <li>Para "texto", "senha" e "oculto" - define o valor inicial (padrão) do campo de entrada;</li> 					
+            <li>Para "checkbox", "radio", "image" - define o valor associado à entrada (este também é o valor que é enviado no envio);</li>		
+        </ul>
+        <p>PS: O atributo value não pode ser usado com &ltinput type="file"&gt. </p>
+        
+        <b><p>d)Qual atributo deve ser utilizado para agrupar vários botões de rádio em um formulário de modo que apenas um deles fique marcado de cada vez?</p></b>
+        <p>O atributo é o checkbox e a sintaxe é: &ltinput type="checkbox"&gt. É ele que define uma caixa de seleção. A caixa de seleção é mostrada como uma caixa quadrada que é marcada quando ativada. As caixas de seleção são usadas para permitir que um usuário selecione uma ou mais opções de um número limitado de opções.
+        É sempre bom adicionar a tag &ltlabel&gt para melhores práticas de acessibilidade.</p>
+        
+        <b><p>e) Para que serve a tag &ltlabel&gt? Para que serve o atributo "for" nessa tag?</p></b>
+        <p>A tag &ltlabel&gt define um rótulo para vários elementos, como por exemplo:</p>
+        <ul style="list-style-type:disc">
+            <li>&ltinput type="checkbox"&gt</li>
+            <li>&ltinput type="color"&gt</li>
+            <li>&ltinput type="data"&gt</li>
+            <li>&ltinput type="datetime-local"&gt</li>
+            <li>&ltinput type="email"&gt</li>
+            <li>&ltinput type="arquivo"&gt</li>
+            <li>&ltinput type="mês"&gt</li>
+            <li>&ltinput type="número"&gt</li>
+            <li>&ltinput type="senha"&gt</li>
+            <li>&ltinput type="radio"&gt</li>
+            <li>&ltinput type="intervalo"&gt</li>
+            <li>&ltinput type="pesquisa"&gt</li>
+            <li>&ltinput type="tel"&gt</li>
+            <li>&ltinput type="texto"&gt</li>
+            <li>&ltinput type="time"&gt</li>
+            <li>&ltinput type="url"&gt</li>
+            <li>&ltinput type="semana"&gt</li>
+            <li>&ltmetro&gt</li>
+            <li>&ltprogresso&gt</li>
+            <li>&ltselecione&gt</li>
+            <li>&lttextarea&gt</li>
+        </ul>
+        <p>O uso adequado de rótulos com os elementos acima beneficiará usuários de leitores de tela (lerão em voz alta o rótulo, quando o usuário estiver focado no elemento).</p>
+        <p>Usuários que têm dificuldade em clicar em regiões muito pequenas (como caixas de seleção) porque quando um usuário clica no texto dentro do elemento &ltlabel&gt, ele alterna a entrada e isso aumenta a área de acerto.</p> 
+        <p>O atributo "for" de &ltlabel&gt deve ser igual ao atributo "id" do elemento relacionado para vinculá-los.</p>
+        <p>Um rótulo também pode ser vinculado a um elemento colocando o elemento dentro do elemento &ltlabel&gt.</p>
+        
+        <b><p>f) Na tag &ltoption&gt para que serve o atributo "selected"?</p></b>
+        <p>O atributo selected é um atributo booleano. Quando presente, especifica que uma opção deve ser pré-selecionada quando a página for carregada. A opção pré-selecionada será exibida primeiro na lista suspensa.</p>
+        <p>PS: O atributo selected também pode ser definido após o carregamento da página, com um JavaScript.</p>
+        
+        <b><p>g) Nas tags de formulário para que serve o atributo "required"?</p></b>
+       <p>O atributo required é um atributo booleano.
+        Quando presente, especifica que um campo de entrada deve ser preenchido antes de enviar o formulário. Observação: o atributo required funciona com os seguintes tipos de entrada: texto, pesquisa, url, telefone, e-mail, senha, seletores de data, número, caixa de seleção, rádio e arquivo.</p>
+       
+        <b><p>h) Na tag &ltform&gt para que serve o atributo "action"?</p></b>
+       <p>O atributo action especifica para onde enviar os dados do formulário quando este é enviado através da internet.</p>
+        <p>Sua sintaxe é: &ltform action="URL"&gt.</p>
+        <p>URL = Destino dos dados do formulário. Valores Possíveis:
+        <br>
+        Um URL absoluto - aponta para outro site (como action = "http://www.example.com/example.htm");
+        <br>
+        Um URL relativo - aponta para um arquivo dentro de um site (como action="example.htm")</p>
+        
+        <b><p>i) Na tag &ltform&gt para que serve o atributo "method"?</p></b>
+        <p>O atributo method especifica como enviar dados de formulário (os dados de formulário são enviados para a página especificada no atributo action).
+           Os dados do formulário podem ser enviados como variáveis de URL com o atributo (method="get") ou como transação de postagem HTTP com o atributo (method="post").</p>
+        <p>Observações sobre o método GET:</p>
+        <ul style="list-style-type:disc">
+            <li>Anexa dados de formulário ao URL em pares de nome/valor;</li>
+            <li>O comprimento de um URL é limitado (cerca de 3.000 caracteres);</li>
+            <li>Nunca use GET para enviar dados confidenciais! (será visível no URL);</li>
+            <li>Útil para envios de formulários em que um usuário deseja marcar o resultado;</li>
+            <li>GET é melhor para dados não seguros, como strings de consulta no Google.</li>
+        </ul>
+            <p>Observações sobre o POST:</p>
+        <ul style="list-style-type:disc">
+            <li>Anexa dados de formulário dentro do corpo da solicitação HTTP (os dados não são mostrados na URL);</li>
+            <li>Não tem limitações de tamanho;</li>
+            <li>Envios de formulários com POST não podem ser marcados.</li>
+        </ul>
+        
+        <b><p>j) Para que o valor digitado de uma senha não apareça na barra de endereços do navegador, qual deve ser o valor do atributo "method" na tag &ltform&gt?</p></b>
+        <p>O valor a ser utilizado do atributo method é o “post”, uma vez que ele não mostra os dados na URL.</p>
+        
+        <b><p>k) Qual valor deve ser informado no atributo "method" na tag &ltform&gt em um formulário que será usado para fazer upload de arquivos?</p></b>
+        <p>O valor a ser utilizado do atributo method é o “post”, uma vez que ele não possui limitação de tamanho dos dados.</p>
+        
+	<b><p>2) Link para a página do</b>
+            <a href="formulario.html">
+            Formulário
+            </a></p>
+	
+	<b><p>3) Link para a página do</b>
+            <a href="formulario_de_sala_de_aula.html">
+            Formulário de Sala de Aula
+            </a></p>
+        <p id="Fim">
+	Ir Para o <a href="#Topo">Topo da Página</a>
+    </body>
+</html>
