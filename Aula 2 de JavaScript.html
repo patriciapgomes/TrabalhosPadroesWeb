@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavScript</title>
+</head>
+
+<body>
+    <h1>JavScript</h1>
+
+    <p id="par1">Olá José</p>
+
+    <script>
+        //nome é uma variável
+
+        let nome = prompt("Qual é o seu nome?");
+        alert("Olá, " + nome);
+
+        //o tipo da variável é definido pelo seu conteúdo, independentemente se antes ela era caracter e depois ela recebeu um valor numé-
+        //rico por exemplo. Neste caso, nome é do tipo caracter.
+        // Se digitarmos nome = Paty, aparecerá "Olá, Paty".
+
+        // O TypeScript é o JavaScript com a verificação de tipos de variável. Nele, isso dá errado. Vale a pena trabalhar com ele em for-
+        //lários, para que ele verifique se o usuário digitou algum valor do tipo errado no meio do caminho. Ele "acha o erro" mais facil-
+        //mente.
+
+        nome = 1
+        alert("Olá, " + nome);
+        // neste caso vai aparecer "Olá, 1".
+        //document representa o body, o documento.
+        //precis escrever DESSE JEITINHO os maiúsculos, maiúsculos e os minusculos, minusculos.
+        document.getElementById("par1").innerHTML = "Olá, " + nome + "!";
+
+        
+    </script>
+    <!-- Teste: se eu colocar outro Id igual Outro par1 ele leu só o 1º e ignorou este abaixo:
+
+    <p id="par1">Olá Maria</p>
+
+</body>
+
+</html>
