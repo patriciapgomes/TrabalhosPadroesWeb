@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>JavaScript</title>
+</head>
+
+<body>
+
+
+    <h1>Cálculo da Média entre 2 Notas</h1>
+
+    <!--A tag Div é um elemento de bloco na página e quebra a linha antes e depois.-->
+    <!--A tag Span não quebra a linha-->
+
+    <p>1ª Nota:
+        <input type="text" Id="nota1">
+    </p>
+
+    <p>2ª Nota:
+        <input type="text" Id="nota2">
+    </p>
+
+    <p>Média:
+        <span Id="media"></span>
+    </p>
+
+    <p>Situação:
+        <span Id="situacao"></span>
+    </p>
+
+    <button onclick="VerificaSituacao()">Verificar Situação</button>
+
+    <script>
+        function VerificaSituacao() {
+
+            // Link do Github: https://patriciapgomes.github.io/TrabalhosPadroesWeb/Calculo_de_Media_JavaScript.html
+
+            //Aqui não é necessário declarar variável e nem dizer qual é o tipo dela. Ela vai assumir o valor atribuído a ela.
+            //"let" cria uma variável. Por isso, "nome" aqui é uma variável.
+
+            let nota1 = parseFloat(document.getElementById("nota1").value);
+
+            let nota2 = parseFloat(document.getElementById("nota2").value);
+
+            let media = (nota1 + nota2) / 2;
+
+            let situacao = "";
+
+            let cor = "";
+
+            //Se não colocarmos um botão para o código começar a rodar ele vai calcular a média antes do
+            //usuário ter a oportunidade de digitar as notas.
+            //Por isso é necessário algumas instruções estarem dentro de uma função.
+            //de forma condicional.
+
+
+            //No JavaScript o teste lógico vem sempre dentro dos parêntesis
+            //No JavaScript não precisa escrever "Então", o programador era preguiçoso. rsrsrsrs
+            //O IF é uma bifurcação não se executa as tarefas do IF e do ELSE. se executa do IF e
+            //vai embora ou do ELSE e vai embora. ou vai para um lado OU para o outro. 
+
+            if (media >= 6) {
+                situacao = " Aprovado";
+                cor = "blue";
+            } else {
+
+                //o "&&" (duplo) serve para concatenar condições no JavaScript
+                //&& significa AND (E) e ||significa OR (OU)
+                // Alt + Shift + F -> corrige a indentação do documento
+
+                if (media >= 2 && media < 6) {
+                    situacao = " Exame Final";
+                    cor = "orange";
+
+                } else {
+                    situacao = " Reprovado";
+                    cor = "red";
+                }
+            }
+            document.getElementById("media").innerHTML = media;
+            document.getElementById("situacao").innerHTML = situacao;
+            document.getElementById("situacao").style.color = cor; // Este é o comando que muda a cor da fonte em cada caso. 
+        }
+    </script>
+
+    <button><a href="index.html">
+            Voltar à Página Principal
+        </a></button>
+</body>
+
+</html>
