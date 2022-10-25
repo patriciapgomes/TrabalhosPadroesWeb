@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Anek Malayan', sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+table{
+    width: 100vw;
+    text-align: center;
+}
+
+.header{
+    background-color: #10502f;
+    color: #ffffff;
+    box-shadow: 0px 2px 4px #6e6e6e;
+    border-collapse: collapse;
+    font-size: 0.75em;
+    position: fixed;
+}
+
+#logo td{
+    height: 48px;
+    padding-top: 4px;    
+}
+
+td{
+    height: 50px;
+    width: 104px;
+    color: #84918a;
+}
+
+.nav-conteudo-lateral{
+    width: 400px;
+}
+
+.nav-destacado{
+    border-bottom: 3px solid #ffffff;
+    color: #ffffff;
+}
+
+.nav-destacado:hover{
+    background-color: #0e482a;
+    cursor: pointer;
+}
+
+.tabela-Copadomundo{
+    position: absolute;
+    margin-top: 110px;
+    z-index: -1;
+
+    border: 1px solid #e9eaeb;
+    border-top:none;
+    border-bottom:none;
+    width: 40vw;
+    margin-left: 30%;
+
+    font-size: 0.75em;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
