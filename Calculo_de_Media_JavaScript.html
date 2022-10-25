@@ -81,7 +81,7 @@
 
         if (media >= 6) {
             situacao = "Aprovado";
-            document.getElementById("situacao").style.color = "blue";
+            color = "blue";
         } else {
 
             //o "&&" (duplo) serve para concatenar condições no JavaScript
@@ -90,11 +90,11 @@
 
             if (media >= 2 && media < 6) {
                 situacao = "Exame Final";
-                document.getElementById("situacao").style.color = "green";
+                color = "orange";
 
             } else {
                 situacao = "Reprovado";
-                document.getElementById("situacao").style.color = "red";
+                color = "red";
             }
         }
         document.getElementById("nota1").innerHTML = nota1;
