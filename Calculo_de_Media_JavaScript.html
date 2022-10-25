@@ -12,12 +12,17 @@
 
 <body>
 
-	
-	<h1>Cálculo da Média</h1>
+
+    <h1>Cálculo da Média</h1>
+
+    <!--A tag Div é um elemento de bloco na página e quebra a linha antes e depois.-->
+    <!--A tag Span não quebra a linha-->
 
     <p>1ª Nota:
         <span Id="nota1"></span>
     </p>
+
+    <!--A tag Span com o ID é só para marcar onde eu quero que apareça a informação nota2-->
 
     <p>2ª Nota:
         <span Id="nota2"></span>
@@ -32,8 +37,8 @@
     </p>
 
     <script>
-	
-		// Link do Github: https://patriciapgomes.github.io/TrabalhosPadroesWeb/Calculo_de_Media_JavaScript.html
+
+        // Link do Github: https://patriciapgomes.github.io/TrabalhosPadroesWeb/Calculo_de_Media_JavaScript.html
 
         //Aqui não é necessário declarar variável e nem dizer qual é o tipo dela. Ela vai assumir o valor atribuído a ela.
         //"let" cria uma variável. Por isso, "nome" aqui é uma variável.
@@ -55,19 +60,24 @@
 
         //document.write("olá!") -> serve para apagar o que veio antes.
 
-        // Para que o navegador leia a variável como um número (e não como texto) é necessário acrescentar o
-        //"parseFloat" para números com casas decimais ou "parseInt" para números inteiros (ou quando se quiser des-
-        //presar as casas decimais).
+        //Para que o navegador leia a variável como um número (e não como texto) é necessário
+        //acrescentar o "parseFloat" para números com casas decimais ou "parseInt" para números
+        //inteiros (ou quando se quiser despresar as casas decimais).
 
         let nota1 = parseFloat(prompt("Qual foi sua 1ª nota?"));
         let nota2 = parseFloat(prompt("Qual foi sua 2ª nota?"));
 
         let media = (nota1 + nota2) / 2;
 
-        // neste caso criamos a variável "situacao" com valor vazio dentro da tag script para que dentro das funções
-        //"if, then, else" ela possa ter seu valor atribuído, conforme cada caso.
+        // neste caso criamos a variável "situacao" com valor vazio dentro da tag script para que
+        //dentro das funções "if, then, else" ela possa ter seu valor atribuído, conforme cada caso.
 
         let situacao = "";
+
+        //No JavaScript o teste lógico vem sempre dentro dos parêntesis
+        //No JavaScript não precisa escrever "Então", o programador era preguiçoso. rsrsrsrs
+        //O IF é uma bifurcação não se executa as tarefas do IF e do ELSE. se executa do IF e
+        //vai embora ou do ELSE e vai embora. ou vai para um lado OU para o outro. 
 
         if (media >= 6) {
             situacao = "Aprovado";
@@ -75,6 +85,8 @@
         } else {
 
             //o "&&" (duplo) serve para concatenar condições no JavaScript
+            //&& significa AND (E) e ||significa OR (OU)
+            // Alt + Shift + F -> corrige a indentação do documento
 
             if (media >= 2 && media < 6) {
                 situacao = "Exame Final";
