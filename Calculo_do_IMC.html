@@ -1,92 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css" />
-    <title>Cálculo do IMC</title>
 
+    <title>JavaScript</title>
 </head>
 
 <body>
-    <h1>Cálculo do IMC com JavaScript</h1>
-    
-    <p>Peso:
-        <input type="text" Id="peso">
+    <h1>The Element Object</h1>
+
+    <h2>The appendChild() Method</h2>
+
+    <!-- O método appendChild() insere um novo nó na estrutura do DOM (Modelo de Objeto de Documento)
+     de um documento, e é a segunda parte do processo de criar e adicionar itens - tão importante na
+     construção de páginas web em termos de programação.-->
+
+    <p> Lista de Compras:
+        <ul input type="text" style="list-style-type: none" Id="MinhaLista">
+        <li><input type="radio" name="cores" value="a">Café</li>
+        <li><input type="radio" name="cores" value="b">Pão</li>
+        <li><input type="radio" name="cores" value="c">Tapioca</li>
+        <li><input type="radio" name="cores" value="d">Ovos</li>
+        <li><input type="radio" name="cores" value="e">Óleo</li>
+    </ul>
     </p>
 
-    <p>Altura:
-        <input type="text" Id="altura">
+    <p>
+        <span Id=" itemlista "></span>
     </p>
 
-    <p>IMC:
-        <span Id="imc"></span>
-    </p>
+    <p>Clique em "Acrescentar Item" para acrescentar um novo item ao final da lista:</p>
 
-    <p>Situação:
-        <span Id="situacao"></span>
-    </p>
-    
-    <button onclick="CalculeSeuIMC()">Calcule seu IMC</button>
 
-    <script>
-        
-        function CalculeSeuIMC() {
-   
-        let peso =   parseFloat(document.getElementById("peso").value); 
-        let altura = parseFloat(document.getElementById("altura").value); 
-        let imc = peso / (altura * altura);
-        
-        // neste caso criamos as variáveis "situacao" e "cor" com valor vazio dentro da tag <script> para que
-        //dentro das funções "if, (then) e else" elas possam ter seus valores atribuídos conforme cada caso.
-        
-        let situacao = "";
-        let cor = "";
-        
-        if (imc < 17) {
-            situacao = "Perigo: Muito Abaixo do Peso";
-            cor = "vermelho";
-        } else {
-        
-            if (imc >= 17 && imc < 18,49) {  
-                situacao = "Alerta: Abaixo do Peso";
-                cor = "laranja";
-            } else {
-        
-                if (imc >= 18,50 && imc < 24,99) {  
-                    situacao = "Peso Normal";
-                    cor = "verde";
-                } else {
-                    
-                        if (imc >= 25 && imc < 29,99) {  
-                            situacao = "Alerta: Acima do Peso";
-                            cor = "laranja";
-                        } else {
-        
-                            if (imc >= 30 && imc < 34,99) {
-                                situacao = "Perigo: Obesidade I";
-                                cor = "vermelho";
-                            } else {                                
-                                    if (imc >= 35 && imc < 39,99) {
-                                        situacao = "Perigo: Obesidade II (Severa)";
-                                        cor = "vermelho";
-                                    } else {
-                                        
-                                           if (imc >= 40 ) {
-                                                situacao = "Perigo: Obesidade III (Mórbida)";
-                                                cor = "vermelho";
-                                            }
-              }
-    
-        document.getElementById("peso").innerHTML = peso;
-        document.getElementById("altura").innerHTML = altura;
-        document.getElementById("imc").innerHTML = imc;
-        document.getElementById("situacao").innerHTML = situacao;
-        document.getElementById("situacao").style.color = cor; // Este é o comando que muda a cor da fonte em cada caso.             
-    }
-                            
-    </script>    
+    <button id="mybutton"> Acrescentar Item</button>
+
+    <P id="demo">
+        <script>
+            const element = document.getElementById("mybutton");
+
+            element.addEventListener("click", FuncaoAcrescentar);
+
+            function FuncaoAcrescentar() {
+
+                // Create an "li" node:
+                const node = document.createElement("li");
+
+                // Create a text node:
+                const textnode = document.createTextNode("");
+
+                let itemlista = (document.getElementById("itemlista").value);
+
+                let cor = "";
+
+                //Append the text node to the "li" node:
+                node.appendChild(textnode);
+
+                // Append the "li" node to the list:
+
+                document.getElementById("MinhaLista").appendChild(node);
+
+                cor = document.querySelector('input[name="cores"]:checked').value;
+
+            }
+        </script>
+
 </body>
+
 </html>
