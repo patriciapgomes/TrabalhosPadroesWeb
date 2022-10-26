@@ -15,20 +15,21 @@
 
     <h2>The appendChild() Method</h2>
 
-    <!-- O método appendChild() insere um novo nó na estrutura do DOM (Modelo de Objeto de Documento) de um documento, e é a segunda parte do processo de criar e adicionar itens - tão importante na construção de páginas web em termos de programação.-->
+    <!-- O método appendChild() insere um novo nó na estrutura do DOM (Modelo de Objeto de Documento) de um documento, e é a segunda parte do processo de
+    criar e adicionar itens - tão importante na construção de páginas web em termos de programação.-->
 
     <p> Lista de Compras:
     <ul input type="text" Id="MinhaLista">
-        <li><input type="radio" name="cores" value="a">Café</li>
-        <li><input type="radio" name="cores" value="b">Pão</li>
-        <li><input type="radio" name="cores" value="c">Tapioca</li>
-        <li><input type="radio" name="cores" value="d">Ovos</li>
-        <li><input type="radio" name="cores" value="e">Óleo</li>
+        <li><input type="radio" name="cor" value="a">Café</li>
+        <li><input type="radio" name="cor" value="b">Pão</li>
+        <li><input type="radio" name="cor" value="c">Tapioca</li>
+        <li><input type="radio" name="cor" value="d">Ovos</li>
+        <li><input type="radio" name="cor" value="e">Óleo</li>
     </ul>
     </p>
 
     <p>
-        <span Id=" itemlista "></span>
+        <span Id="itemlista"></span>
     </p>
 
     <p>Clique em "Acrescentar Item" para acrescentar um novo item ao final da lista:</p>
@@ -55,7 +56,7 @@
 
             document.getElementById("MinhaLista").appendChild(node);
 
-            cor = document.querySelector('input[name="cores"]:checked').value;
+            cor = document.querySelector('input[name="cor"]:checked').value;
 
         }
     </script>
