@@ -39,8 +39,8 @@
         let altura = parseFloat(document.getElementById("altura").value); 
         let imc = peso / (altura x altura);
         
-        // neste caso criamos a variável "situacao" com valor vazio dentro da tag script para que
-        //dentro das funções "if, then, else" ela possa ter seu valor atribuído, conforme cada caso.
+        // neste caso criamos as variáveis "situacao" e "cor" com valor vazio dentro da tag <script> para que
+        //dentro das funções "if, (then) e else" elas possam ter seus valores atribuídos conforme cada caso.
         
         let situacao = "";
         let cor = "";
@@ -51,33 +51,33 @@
         } else {
         
             if (imc >= 17 && media < 18,49) {  
-            situacao = "Alerta: Abaixo do Peso";
-            cor = "laranja";
+                situacao = "Alerta: Abaixo do Peso";
+                cor = "laranja";
             } else {
         
                 if (imc >= 18,50 && media < 24,99) {  
-                situacao = "Peso Normal";
-                cor = "verde";
+                    situacao = "Peso Normal";
+                    cor = "verde";
                 } else {
                     
                         if (imc >= 25 && media < 29,99) {  
-                        situacao = "Alerta: Acima do Peso";
-                        cor = "laranja";
+                            situacao = "Alerta: Acima do Peso";
+                            cor = "laranja";
                         } else {
         
                             if (imc >= 30 && media < 34,99) {
-                            situacao = "Perigo: Obesidade I";
-                            cor = "vermelho";
+                                situacao = "Perigo: Obesidade I";
+                                cor = "vermelho";
                             } else {
                                 
                                     if (imc >= 35 && media < 39,99) {
-                                    situacao = "Perigo: Obesidade II";
-                                    cor = "vermelho";
+                                        situacao = "Perigo: Obesidade II";
+                                        cor = "vermelho";
                                     } else {
                                         
                                            if (imc >= 40 ) {
-                                            situacao = "Perigo: Obesidade III";
-                                            cor = "vermelho";
+                                                situacao = "Perigo: Obesidade III";
+                                                cor = "vermelho";
                                             }
             }
     
