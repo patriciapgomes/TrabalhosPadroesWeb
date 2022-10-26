@@ -12,19 +12,31 @@
 
 <body>
     <h1>Cálculo do IMC com JavaScript</h1>
+    
+    <p>Peso:
+        <input type="text" Id="peso">
+    </p>
 
-    <p id="imc">IMC</p>
+    <p>Altura:
+        <input type="text" Id="altura">
+    </p>
+
+    <p>IMC:
+        <span Id="imc"></span>
+    </p>
+
+    <p>Situação:
+        <span Id="situacao"></span>
+    </p>
     
-    <p id="peso">Peso</p>
-    
-    <p id="altura">Altura</p>
-    
-    <p id="situacao">Situação</p>
+    <button onclick="CalculeSeuIMC()">Calcule seu IMC</button>
 
     <script>
+        
+        function CalculeSeuIMC() {
    
-        let peso =   prompt (Por favor, digite seu peso em Kg:  );
-        let altura = prompt (Por favor, digite sua altura em cm:  );
+        let peso =   parseFloat(document.getElementById("peso").value); 
+        let altura = parseFloat(document.getElementById("altura").value); 
         let imc = peso / (altura x altura);
         
         // neste caso criamos a variável "situacao" com valor vazio dentro da tag script para que
