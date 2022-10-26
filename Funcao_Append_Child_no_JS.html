@@ -39,20 +39,20 @@
     <script>
         function FuncaoAcrescentar() {
 
-            // Create an "li" node:
+            // Crie uma linha no nó:
             const node = document.createElement("li");
 
-            // Create a text node:
+            // Criando um novo nó de texto:
             const textnode = document.createTextNode("");
 
             let itemlista = (document.getElementById("itemlista").value);
 
             let cor = "";
 
-            //Append the text node to the "li" node:
+            //Anexando o nó de texto ao nó da linha:
             node.appendChild(textnode);
 
-            // Append the "li" node to the list:
+            // Anexando a linha ao nó da lista:
 
             document.getElementById("MinhaLista").appendChild(node);
 
