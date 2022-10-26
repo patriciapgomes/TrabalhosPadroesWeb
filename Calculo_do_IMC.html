@@ -11,15 +11,9 @@
 </head>
 
 <body>
-    <h1>Cálculo do IMC com JavScript</h1>
+    <h1>Cálculo do IMC com JavaScript</h1>
 
     <p id="imc">IMC</p>
-
-    <p id="normal">Normal</p>
-
-    <p id="baixo">Baixo</p>
-
-    <p id="alto">Alto</p>
     
     <p id="peso">Peso</p>
     
@@ -37,6 +31,7 @@
         //dentro das funções "if, then, else" ela possa ter seu valor atribuído, conforme cada caso.
         
         let situacao = "";
+        
         if (imc < 17) {
             situacao = "Perigo: Muito Abaixo do Peso";
             cor = "vermelho";
@@ -68,13 +63,16 @@
                                     } else {
                                         
                                            if (imc >= 40 ) {
-                                    situacao = "Perigo: Obesidade III";
-                                    cor = "vermelho";
-                                    }
-                                   }
+                                            situacao = "Perigo: Obesidade III";
+                                            cor = "vermelho";
+                                            }
+            }
     
-    
-    
+        document.getElementById("peso").innerHTML = peso;
+        document.getElementById("altura").innerHTML = altura;
+        document.getElementById("imc").innerHTML = imc;
+        document.getElementById("situacao").innerHTML = situacao;
+        document.getElementById("situacao").style.color = cor; // Este é o comando que muda a cor da fonte em cada caso.             
     
     </script>    
 </body>
