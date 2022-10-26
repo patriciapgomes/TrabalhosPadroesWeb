@@ -5,23 +5,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css" />
     <title>Cálculo do IMC</title>
 
 </head>
 
 <body>
-    <h1>Cálculo do IMC com JavScript</h1>
+    <h1>Cálculo do IMC com JavaScript</h1>
+    
+    <p>Peso:
+        <input type="text" Id="peso">
+    </p>
 
-    <p id="imc">IMC</p>
+    <p>Altura:
+        <input type="text" Id="altura">
+    </p>
 
-    <p id="normal">IMC</p>
+    <p>IMC:
+        <span Id="imc"></span>
+    </p>
 
-    <p id="baixo">IMC</p>
-
-    <p id="alto">IMC</p>
+    <p>Situação:
+        <span Id="situacao"></span>
+    </p>
+    
+    <button onclick="CalculeSeuIMC()">Calcule seu IMC</button>
 
     <script>
-
+        
+        function CalculeSeuIMC() {
+   
+        let peso =   parseFloat(document.getElementById("peso").value); 
+        let altura = parseFloat(document.getElementById("altura").value); 
+        let imc = peso / (altura * altura);
+        
+        // neste caso criamos as variáveis "situacao" e "cor" com valor vazio dentro da tag <script> para que
+        //dentro das funções "if, (then) e else" elas possam ter seus valores atribuídos conforme cada caso.
+        
+        let situacao = "";
+        let cor = "";
+        
+        if (imc < 17) {
+            situacao = "Perigo: Muito Abaixo do Peso";
+            cor = "vermelho";
+        } else {
+        
+            if (imc >= 17 && imc < 18,49) {  
+                situacao = "Alerta: Abaixo do Peso";
+                cor = "laranja";
+            } else {
+        
+                if (imc >= 18,50 && imc < 24,99) {  
+                    situacao = "Peso Normal";
+                    cor = "verde";
+                } else {
+                    
+                        if (imc >= 25 && imc < 29,99) {  
+                            situacao = "Alerta: Acima do Peso";
+                            cor = "laranja";
+                        } else {
+        
+                            if (imc >= 30 && imc < 34,99) {
+                                situacao = "Perigo: Obesidade I";
+                                cor = "vermelho";
+                            } else {                                
+                                    if (imc >= 35 && imc < 39,99) {
+                                        situacao = "Perigo: Obesidade II (Severa)";
+                                        cor = "vermelho";
+                                    } else {
+                                        
+                                           if (imc >= 40 ) {
+                                                situacao = "Perigo: Obesidade III (Mórbida)";
+                                                cor = "vermelho";
+                                            }
+              }
+    
+        document.getElementById("peso").innerHTML = peso;
+        document.getElementById("altura").innerHTML = altura;
+        document.getElementById("imc").innerHTML = imc;
+        document.getElementById("situacao").innerHTML = situacao;
+        document.getElementById("situacao").style.color = cor; // Este é o comando que muda a cor da fonte em cada caso.             
+    }
+                            
     </script>    
 </body>
 </html>
