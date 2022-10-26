@@ -42,20 +42,18 @@
             // Crie uma linha no nó:
             const node = document.createElement("li");
 
+            let itemlista = (document.getElementById("itemlista").value);
+           
             // Criando um novo nó de texto:
             const textnode = document.createTextNode("itemlista");
-
-            let itemlista = (document.getElementById("itemlista").value);
-
-            let cor = "";
-
+            
             //Anexando o nó de texto ao nó da linha:
             node.appendChild(textnode);
 
             // Anexando a linha ao nó da lista:
-
             document.getElementById("MinhaLista").appendChild(node);
-
+            
+            let cor = "";
             cor = document.querySelector('input[name="cor"]:checked').value;
 
         }
