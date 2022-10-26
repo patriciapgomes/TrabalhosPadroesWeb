@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css" />
-
+    <link rel="stylesheet" href="./CSS/style.css" />
     <title>JavaScript</title>
 </head>
 
@@ -15,10 +14,11 @@
 
     <h2>The appendChild() Method</h2>
 
-    <!-- O método appendChild() insere um novo nó na estrutura do DOM (Modelo de Objeto de Documento) de um documento, e é a segunda parte do processo de criar e adicionar itens - tão importante na construção de páginas web em termos de programação.-->
+    <!-- O método appendChild() insere um novo nó na estrutura do DOM (Modelo de Objeto de Documento) de um documento, e é a segunda parte do processo de
+    criar e adicionar itens - tão importante na construção de páginas web em termos de programação.-->
 
     <p> Lista de Compras:
-    <ul input type="text" Id="MinhaLista">
+        <ul input type="text" style="list-style-type: none" Id="MinhaLista">
         <li><input type="radio" name="cores" value="a">Café</li>
         <li><input type="radio" name="cores" value="b">Pão</li>
         <li><input type="radio" name="cores" value="c">Tapioca</li>
@@ -28,7 +28,7 @@
     </p>
 
     <p>
-        <span Id=" itemlista "></span>
+        <span Id="itemlista"></span>
     </p>
 
     <p>Clique em "Acrescentar Item" para acrescentar um novo item ao final da lista:</p>
@@ -38,27 +38,29 @@
     <script>
         function FuncaoAcrescentar() {
 
-            // Create an "li" node:
+            // Crie uma linha no nó:
             const node = document.createElement("li");
 
-            // Create a text node:
-            const textnode = document.createTextNode("");
-
-            let itemlista = (document.getElementById("itemlista").value);
-
-            let cor = "";
-
-            //Append the text node to the "li" node:
+           // let itemlista = (document.getElementById("itemlista").value);
+           
+            // Criando um novo nó de texto:
+            const textnode = document.createTextNode(input type="radio" name="cor" value="itemlista"(""));
+            
+            //Anexando o nó de texto ao nó da linha:
             node.appendChild(textnode);
 
-            // Append the "li" node to the list:
-
+            // Anexando a linha ao nó da lista:
             document.getElementById("MinhaLista").appendChild(node);
-
-            cor = document.querySelector('input[name="cores"]:checked').value;
+            
+            let cor = "";
+            cor = document.querySelector('input[name="cor"]:checked').value;
 
         }
     </script>
+
+</body>
+
+</html>
 
 </body>
 
