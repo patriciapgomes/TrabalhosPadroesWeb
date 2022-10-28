@@ -57,42 +57,42 @@
 
                     if (imc < 17) {
                         situacao = "Perigo: Muito Abaixo do Peso";
-                        cor = "vermelho";
+                        cor = "red";
                     } else {
 
                         if (imc >= 17 && imc < 18, 49) {
                             resultadoimc = document.getElementById("imc").value
                             situacao = "Alerta: Abaixo do Peso";
-                            cor = "laranja";
+                            cor = "orange";
                         } else {
 
                             if (imc >= 18, 50 && imc < 24, 99) {
                                 resultadoimc = document.getElementById("imc").value
                                 situacao = "Peso Normal";
-                                cor = "verde";
+                                cor = "green";
                             } else {
 
                                 if (imc >= 25 && imc < 29, 99) {
                                     resultadoimc = document.getElementById("imc").value
                                     situacao = "Alerta: Acima do Peso";
-                                    cor = "laranja";
+                                    cor = "orange";
                                 } else {
 
                                     if (imc >= 30 && imc < 34, 99) {
                                         resultadoimc = document.getElementById("imc").value
                                         situacao = "Perigo: Obesidade I";
-                                        cor = "vermelho";
+                                        cor = "red";
                                     } else {
                                         if (imc >= 35 && imc < 39, 99) {
                                             resultadoimc = document.getElementById("imc").value
                                             situacao = "Perigo: Obesidade II (Severa)";
-                                            cor = "vermelho";
+                                            cor = "red";
                                         } else {
 
                                             if (imc >= 40) {
                                                 resultadoimc = document.getElementById("imc").value
                                                 situacao = "Perigo: Obesidade III (Mórbida)";
-                                                cor = "vermelho";
+                                                cor = "red";
                                             } else {
 
                                                 if resultadoimc.innerHTML = `IMC: ${imc} (${classificacao})`
@@ -101,15 +101,12 @@
                                                 resultadoimc.innerHTML = 'Preencha os campos'
                                             }
                                         }
-                                        document.getElementById("peso").innerHTML = peso;
-                                        document.getElementById("altura").innerHTML = altura;
-                                        document.getElementById("imc").innerHTML = imc;
-                                        document.getElementById("situacao").innerHTML = situacao;
-                                        document.getElementById("situacao").style.color = cor; // Este é o comando que muda a cor da fonte em cada caso.             
                                     }
-                                }
-
-
+                                    document.getElementById("peso").innerHTML = peso;
+                                    document.getElementById("altura").innerHTML = altura;
+                                    document.getElementById("imc").innerHTML = imc;
+                                    document.getElementById("situacao").innerHTML = situacao;
+                                    document.getElementById("situacao").style.color = cor; // Este é o comando que muda a cor da fonte em cada caso.             
     </script>
 </body>
 
