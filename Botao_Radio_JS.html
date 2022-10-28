@@ -1,0 +1,52 @@
+<html lang="pt-br">
+
+<head>
+    <title>Form de exemplo com radios</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <form action="form-action.php" method="post">
+        <p>
+            <input type="radio" name="band-rock" value="beatles" />The Beatles
+            <input type="radio" name="band-rock" value="led-zeppelin" /> Led Zeppelin
+            <input type="radio" name="band-rock" value="pink-floyd" />Pink Floy
+        </p>
+        <P>
+
+            <label for="itemlista">Itens da Lista de Compras:</label>
+            <br>
+            <input type="radio" style="color: blue" name="cor" value="Azul" /> Azul
+            <input type="radio" style="color: green" name="cor" value="Verde" /> Verde
+            <input type="radio" style="color: red" name="cor" value="Vermelho" /> Vermelho
+
+        </p>
+
+        <p>
+            <input type="button" id="AcrescentarItem" onclick="FuncaoAcrescentar()" value="Acrescentar Item" />
+            <input type="button" id="Colorir" value="Colorir" />
+        </p>
+
+    </form>
+
+    <script>
+
+
+
+        /**
+ * Botão Colorir
+ */
+        document.getElementById("Colorir").onclick = function () {
+            var radios = document.getElementsByName("cor");
+
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].value === "Azul") {
+                    radios[i].checked = true;
+                }
+            }
+        };
+
+    </script>
+</body>
+
+</html>
