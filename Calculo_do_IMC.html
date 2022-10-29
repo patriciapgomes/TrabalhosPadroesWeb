@@ -39,14 +39,14 @@
     <script>
 
         function CalculeSeuIMC() {
-            const imc = parseFloat.document.querySelector('#resultadoimc')
+            const imc = parseFloat.document.querySelector('#imc')
             const altura = parseFloat.document.querySelector('#altura')
             const peso = parseFloat.document.querySelector('#peso')
 
             const CalculeSeuIMC = () => {
 
                 if (altura.value !== '' && peso.value !== '') {
-                    const imc = (peso.value / (altura.value * altura.value)).toFixed(2)
+                    const imc = parseFloat.(peso.value / (altura.value * altura.value)).toFixed(2)
 
                     // neste caso criamos as variáveis "situacao" e "cor" com valor vazio dentro da tag <script> para que
                     //dentro das funções "if, (then) e else" elas possam ter seus valores atribuídos conforme cada caso.
@@ -56,42 +56,42 @@
                     let cor = "";
 
                     if (imc < 17) {
-                        imc = parseFloat.document.getElementById("imc").value
+                        imc = document.getElementById("imc").value
                         situacao = "Perigo: Muito Abaixo do Peso";
                         cor = "red";
                     } else {
 
                         if (imc >= 17 && imc < 18, 49) {
-                            imc = parseFloat.document.getElementById("imc").value
+                            imc = document.getElementById("imc").value
                             situacao = "Alerta: Abaixo do Peso";
                             cor = "orange";
                         } else {
 
                             if (imc >= 18, 50 && imc < 24, 99) {
-                                imc = parseFloat.document.getElementById("imc").value
+                                imc = document.getElementById("imc").value
                                 situacao = "Peso Normal";
                                 cor = "green";
                             } else {
 
                                 if (imc >= 25 && imc < 29, 99) {
-                                    imc = parseFloat.document.getElementById("imc").value
+                                    imc = document.getElementById("imc").value
                                     situacao = "Alerta: Acima do Peso";
                                     cor = "orange";
                                 } else {
 
                                     if (imc >= 30 && imc < 34, 99) {
-                                        imc = parseFloat.document.getElementById("imc").value
+                                        imc = document.getElementById("imc").value
                                         situacao = "Perigo: Obesidade I";
                                         cor = "red";
                                     } else {
                                         if (imc >= 35 && imc < 39, 99) {
-                                            imc = parseFloat.document.getElementById("imc").value
+                                            imc = document.getElementById("imc").value
                                             situacao = "Perigo: Obesidade II (Severa)";
                                             cor = "red";
                                         } else {
 
                                             if (imc >= 40) {
-                                                imc = parseFloat.document.getElementById("imc").value
+                                                imc = document.getElementById("imc").value
                                                 situacao = "Perigo: Obesidade III (Mórbida)";
                                                 cor = "red";
                                             } else {
@@ -111,4 +111,4 @@
     </script>
 </body>
 
-</html> 
+</html>
