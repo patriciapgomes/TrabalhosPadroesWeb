@@ -2,22 +2,28 @@
 <html lang="pt-br">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css" />
+
     <title>The appendChild() Method</title>
+
 </head>
 
 <body>
-    <h1>The Element Object</h1>
+    <h2>The Element Object</h2>
 
-    <h2>The appendChild() Method</h2>
+    <h3>The appendChild() Method</h3>
 
-    <!-- O método appendChild() insere um novo nó na estrutura do DOM (Modelo de Objeto de Documento) de um documento, e é a segunda parte
-        do processo de criar e adicionar itens, tão importante na construção de páginas web em termos de programação.-->
+    <!-- O método appendChild() insere um novo nó na estrutura do Modelo de Objeto d0 Documento - (DOM) de um
+        documento, e é a segunda parte do processo de criar e adicionar itens, tão importante na construção de
+        páginas web em termos de programação.-->
 
-    <p> Lista de Compras:
+    <p>Clique em "Acrescentar Item" para acrescentar um novo item ao final da
+        <br>
+        Lista de Compras:
     <ul input type="text" style="list-style-type: none" Id="MinhaLista">
         <li><input type="checkbox" name="compras" value="cafe">Café</li>
         <li><input type="checkbox" name="compras" value="pao">Pão</li>
@@ -25,13 +31,11 @@
         <li><input type="checkbox" name="compras" value="ovos">Ovos</li>
         <li><input type="checkbox" name="compras" value="oleo">Óleo</li>
     </ul>
+    </p>
 
     <p>
         <span Id="itemlista"></span>
     </p>
-
-
-    <p>Clique em "Acrescentar Item" para acrescentar um novo item ao final da lista:</p>
 
     <!-- <button onclick="FuncaoAcrescentar()">Acrescentar Item</button> -->
     <p>
@@ -48,8 +52,8 @@
             let itemlista = (document.getElementById("itemlista").value);
 
             // Criando um novo nó de texto:
-            const textnode = document.createTextNode(input type="text" name="cor" id="itemlista" value="");
-            
+            const textnode = document.createTextNode(input type = "text" name = "compras" id = "itemlista" value = "");
+
             //Anexando o nó de texto ao nó da linha:
             node.appendChild(textnode);
 
@@ -61,7 +65,6 @@
 
             <p>
                 <label for="itemlista">Itens da Lista de Compras:</label>
-
 
                 <br>
                     <input type="radio" style="color: blue" name="cor" value="Azul" /> Azul
