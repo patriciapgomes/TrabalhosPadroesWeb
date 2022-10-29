@@ -72,13 +72,12 @@ element.addEventListener("click", FuncaoAcrescentar);
 
                 <p>
                     <label for="itemlista">Itens da Lista de Compras:</label>
-
                     <br>
                         <input type="radio" style="color: blue" name="cor" value="Azul" /> Azul
                         <input type="radio" style="color: green" name="cor" value="Verde" /> Verde
                         <input type="radio" style="color: red" name="cor" value="Vermelho" /> Vermelho
-                        <br>
-                            <input type="button" id="Colorir" value="Colorir" />
+                    <br>
+                        <input type="button" id="Colorir" value="Colorir" />
                         </p>
 
                         // Botão Colorir:
@@ -87,12 +86,13 @@ element.addEventListener("click", FuncaoAcrescentar);
                             var radios = document.getElementsByName("cor"); f
                         for (var i = 0; i < radios.length; i++) {
                                 if (radios[i].value === "Azul") {
-                            radios[i].checked = true;
+                            radios[i].checked = true};
                                 }
                             }
                         }
             
                     }
+
         </script>
 
 </body>
