@@ -42,7 +42,6 @@
             const imc = parseFloat(document.querySelector('#imc'))
             const altura = parseFloat(document.querySelector('#altura'))
             const peso = parseFloat(document.querySelector('#peso'))
-
             if (altura.value !== '' && peso.value !== '') {
                 const imc = (peso.value / (altura.value * altura.value)).toFixed(2)
 
@@ -50,38 +49,45 @@
                 // <script> para que dentro das funções "if, (then) e else" elas possam ter seus valores
                 // atribuídos conforme cada caso.
 
-                let classificacao = ''
-                let situacao = "";
-                let cor = "";
+                let classificacao = ""
+                let situacao = ""
+                let cor = ""
 
                 if (imc < 17) {
                     imc = document.getElementById("imc").value
-                    situacao = "Perigo: Muito Abaixo do Peso";
-                    cor = "red";
+                    situacao = "Perigo: Muito Abaixo do Peso"
+                    cor = "red"
+
                 } else if (imc >= 17 && imc < 18.49) {
                     imc = document.getElementById("imc").value
-                    situacao = "Alerta: Abaixo do Peso";
-                    cor = "orange";
+                    situacao = "Alerta: Abaixo do Peso"
+                    cor = "orange"
+
                 } else if (imc >= 18.50 && imc < 24.99) {
                     imc = document.getElementById("imc").value
-                    situacao = "Peso Normal";
-                    cor = "green";
+                    situacao = "Peso Normal"
+                    cor = "green"
+
                 } else if (imc >= 25 && imc < 29.99) {
                     imc = document.getElementById("imc").value
-                    situacao = "Alerta: Acima do Peso";
-                    cor = "orange";
+                    situacao = "Alerta: Acima do Peso"
+                    cor = "orange"
+
                 } else if (imc >= 30 && imc < 34.99) {
                     imc = document.getElementById("imc").value
-                    situacao = "Perigo: Obesidade I";
-                    cor = "red";
+                    situacao = "Perigo: Obesidade I"
+                    cor = "red"
+
                 } else if (imc >= 35 && imc < 39.99) {
                     imc = document.getElementById("imc").value
-                    situacao = "Perigo: Obesidade II (Severa)";
-                    cor = "red";
+                    situacao = "Perigo: Obesidade II (Severa)"
+                    cor = "red"
+
                 } else if (imc >= 40) {
                     imc = document.getElementById("imc").value
-                    situacao = "Perigo: Obesidade III (Mórbida)";
-                    cor = "red";
+                    situacao = "Perigo: Obesidade III (Mórbida)"
+                    cor = "red"
+
                 } else {
                     imc.innerHTML = "Preencha os campos de forma adequada."
                 }
@@ -94,7 +100,7 @@
             }
         }
     </script>
-    
+
 </body>
 
 </html>
