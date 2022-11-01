@@ -44,7 +44,7 @@
             const altura = parseFloat(document.querySelector('#altura'))
             const peso = parseFloat(document.querySelector('#peso'))
 
-            if (altura.value !== '' && peso.value !== '') {                
+            if (altura.value !== "" && peso.value !== "") {                
                 const imc = parseFloat((peso.value / (altura.value * altura.value)).toFixed(2))
 
                 // neste caso criamos as variáveis "classificacao", "situacao" e "cor" com valor vazio dentro da tag
@@ -98,7 +98,7 @@
                 document.getElementById("imc").innerHTML = imc
                 document.getElementById("situacao").innerHTML = situacao
                 document.getElementById("situacao").style.color = cor // Este é o comando que muda a cor da
-                // fonte em cada caso.   
+                //fonte em cada caso.   
             }
         }
     </script>
