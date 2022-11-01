@@ -1,5 +1,3 @@
-element.addEventListener("click", FuncaoAcrescentar);
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,7 +8,7 @@ element.addEventListener("click", FuncaoAcrescentar);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css" />
 
-    <title>The appendChild() Method</title>
+    <title>addEventListener</title>
 
 </head>
 
@@ -19,81 +17,68 @@ element.addEventListener("click", FuncaoAcrescentar);
 
     <h3>The appendChild() Method com addEventListener</h3>
 
-    <!-- O método appendChild() insere um novo nó na estrutura do Modelo de Objeto d0 Documento - (DOM) de um
-                    documento, e é a segunda parte do processo de criar e adicionar itens, tão importante na construção de
-                    páginas web em termos de programação.-->
+    <!-- O método appendChild() insere um novo nó na estrutura do Modelo de Objeto de Documento - (DOM) de um
+        documento, e é a segunda parte do processo de criar e adicionar itens, tão importante na construção de
+        páginas web em termos de programação.-->
 
     <p>Clique em "Acrescentar Item" para acrescentar um novo item ao final da
         <br>
         Lista de Compras:
-    <ul input type="text" style="list-style-type: none" Id="MinhaLista">
-        <li><input type="checkbox" name="compras" value="cafe">Café</li>
-        <li><input type="checkbox" name="compras" value="pao">Pão</li>
-        <li><input type="checkbox" name="compras" value="tapioca">Tapioca</li>
-        <li><input type="checkbox" name="compras" value="ovos">Ovos</li>
-        <li><input type="checkbox" name="compras" value="oleo">Óleo</li>
+    <ul style="list-style-type: none" Id="MinhaLista">
+        <li>Café</li>
+        <li>Pão</li>
+        <li>Tapioca</li>
+        <li>Ovos</li>
+        <li>Óleo</li>
     </ul>
     </p>
 
-    <p>
-        <span Id="itemlista"></span>
-    </p>
+    <input type=" text" id="itemlista">
 
-    <p>
+      <p>
         <input type="button" id="AcrescentarItem" onclick="FuncaoAcrescentar()" value="Acrescentar Item" />
 
     </p>
+    <p>
+        <label for="itemlista">Itens da Lista de Compras:</label>
 
-    <P id="demo">
+        <br>
+        <input type="radio" style="color: blue" name="cores" value="blue" /> Azul
+        <input type="radio" style="color: green" name="cores" value="green" /> Verde
+        <input type="radio" style="color: red" name="cores" value="red" /> Vermelho
+        <br>
 
-        <script>
-            const element = document.getElementById("mybutton");
+    </p>
 
-            element.addEventListener("click", FuncaoAcrescentar);
+    <script>
+         const element = document.getElementById("AcrescentarItem")
+         element.addEventListener("click", FuncaoAcrescentar)
+		
+		function FuncaoAcrescentar() {
 
-            function FuncaoAcrescentar() {
+            // Crie uma linha no nó:
+            const node = document.createElement("li")
 
-                // Crie uma linha no nó:
-                const node = document.createElement("li");
+            let itemlista = (document.getElementById("itemlista").value)
 
-                let itemlista = (document.getElementById("itemlista").value);
+            // Criando um novo nó de texto:
+            const textnode = document.createTextNode(itemlista)
 
-                // Criando um novo nó de texto:
-                const textnode = document.createTextNode(input type = "text" name = "compras" id = "itemlista" value = "");
+            //Anexando o nó de texto ao nó da linha: (Em outras palavras: chamando o textnode
+            // de filho do node:)
+            node.appendChild(textnode)
 
-                //Anexando o nó de texto ao nó da linha:
-                node.appendChild(textnode);
+            // Anexando a linha ao nó da lista: (Em outras palavras: chamando o node
+            // de filho da lista "Minha Lista":)
+            document.getElementById("MinhaLista").appendChild(node)
 
-                // Anexando a linha ao nó da lista:
-                document.getElementById("MinhaLista").appendChild(node);
+            let cor = "";
+            cor = document.querySelector('input[name="cores"]:checked').value
+            node.style.color = cor
 
-                let cor = "";
-                cor = document.querySelector('input[name="cor"]:checked').value;
+        }
 
-                <p>
-                    <label for="itemlista">Itens da Lista de Compras:</label>
-                    <br>
-                        <input type="radio" style="color: blue" name="cor" value="Azul" /> Azul
-                        <input type="radio" style="color: green" name="cor" value="Verde" /> Verde
-                        <input type="radio" style="color: red" name="cor" value="Vermelho" /> Vermelho
-                    <br>
-                        <input type="button" id="Colorir" value="Colorir" />
-                        </p>
-
-                        // Botão Colorir:
-
-                        document.getElementById("Colorir").onclick = function () {
-                            var radios = document.getElementsByName("cor"); f
-                        for (var i = 0; i < radios.length; i++) {
-                                if (radios[i].value === "Azul") {
-                            radios[i].checked = true};
-                                }
-                            }
-                        }
-            
-                    }
-
-        </script>
+    </script>
 
 </body>
 
