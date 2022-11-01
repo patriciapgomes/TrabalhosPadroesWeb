@@ -46,7 +46,6 @@
 
             if (altura.value !== "" && peso.value !== "") {                
                 const imc = parseFloat((peso.value / (altura.value * altura.value)).toFixed(2))
-
                 // neste caso criamos as variáveis "classificacao", "situacao" e "cor" com valor vazio dentro da tag
                 // <script> para que dentro das funções "if, (then) e else" elas possam ter seus valores atribuídos
                 // conforme cada caso.
@@ -98,8 +97,8 @@
                 document.getElementById("altura").innerHTML = altura
                 document.getElementById("imc").innerHTML = imc
                 document.getElementById("situacao").innerHTML = situacao
-                document.getElementById("situacao").style.color = cor // Este é o comando que muda a cor da
-                //fonte em cada caso.   
+                document.getElementById("situacao").style.color = cor // Este é o comando que
+                // muda a cor da fonte em cada caso.   
             }
         }
     </script>
